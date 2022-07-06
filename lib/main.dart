@@ -1,10 +1,15 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:projectus/anaekran.dart';
+import 'package:projectus/saatgosterici.dart';
+import 'package:projectus/girisekrani.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  try {
+    await Firebase.initializeApp();
+  } on Exception catch (e) {
+    print(e);
+  }
   runApp(const MyApp());
 }
 
@@ -13,6 +18,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Material App', home: AnaEkran());
+    return MaterialApp(title: 'Material App', home: IkinciEkran());
   }
 }
