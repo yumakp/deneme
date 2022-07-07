@@ -3,10 +3,11 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class UserModel {
   late String id;
    late String isim;
-   late int ?hafta1;
-   late int ?hafta2;
-   late int ?hafta3;
-   late int ?hafta4;
+   late int hafta1;
+   late int hafta2;
+   late int hafta3;
+   late int hafta4;
+  
    
 
   UserModel.snapshot(QueryDocumentSnapshot snapshot) {
@@ -17,6 +18,7 @@ class UserModel {
     hafta2 = data['hafta2'];
     hafta3 = data['hafta3'];
     hafta4 = data['hafta4'];
+    
 
   }
 }

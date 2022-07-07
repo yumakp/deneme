@@ -4,12 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:projectus/saatgosterici.dart';
 
 class IkinciEkran extends StatefulWidget {
+ static final TextEditingController  isminiz = TextEditingController();
   @override
   State<IkinciEkran> createState() => _IkinciEkranState();
 }
 
 class _IkinciEkranState extends State<IkinciEkran> {
-  TextEditingController isminiz = TextEditingController();
+   
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +21,7 @@ class _IkinciEkranState extends State<IkinciEkran> {
 
   AppBar buildAppBar() {
     return AppBar(
-      title: Text(' baslıkiste'),
+      title: Text(' Kaç Saat Çalıştım?'),
     );
   }
 
@@ -41,7 +42,7 @@ class _IkinciEkranState extends State<IkinciEkran> {
             color: Colors.white,
             margin: EdgeInsets.symmetric(vertical: 5, horizontal: 37),
             child: TextField(
-              controller:isminiz,
+              controller:IkinciEkran.isminiz,
                 decoration: InputDecoration(border: OutlineInputBorder())),
           ),
           SizedBox(
