@@ -7,6 +7,8 @@ class UserModel {
    late int hafta2;
    late int hafta3;
    late int hafta4;
+   late int prim;
+   late double maas;
   
    
 
@@ -18,7 +20,8 @@ class UserModel {
     hafta2 = data['hafta2'];
     hafta3 = data['hafta3'];
     hafta4 = data['hafta4'];
-    
+    prim =    data['prim'];
+    maas = double.parse(data ['maas'].toString());
 
   }
 }

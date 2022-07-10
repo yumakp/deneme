@@ -22,6 +22,7 @@ class _IkinciEkranState extends State<IkinciEkran> {
   AppBar buildAppBar() {
     return AppBar(
       title: Text(' Kaç Saat Çalıştım?'),
+      backgroundColor: Color(0xff768692),
     );
   }
 
@@ -42,8 +43,24 @@ class _IkinciEkranState extends State<IkinciEkran> {
             color: Colors.white,
             margin: EdgeInsets.symmetric(vertical: 5, horizontal: 37),
             child: TextField(
+              
+              cursorColor: Colors.orange,
+              
               controller:IkinciEkran.isminiz,
-                decoration: InputDecoration(border: OutlineInputBorder())),
+                decoration: InputDecoration(
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.orange, width: 1.5),
+                  borderRadius: BorderRadius.circular(15),
+                  
+
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.orange, width: 1.5),
+                  borderRadius: BorderRadius.circular(15)
+                ),
+
+                )),
+                
           ),
           SizedBox(
             height: 31,
@@ -62,11 +79,12 @@ class _IkinciEkranState extends State<IkinciEkran> {
   Widget sayfayaGitmeButonu(Widget sayfa) {
     return ElevatedButton(
         style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(Colors.black)),
+            backgroundColor: MaterialStateProperty.all(Colors.orange)),
         onPressed: () {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => sayfa));
         },
+        
         child: Text("Bu Ay Kaç Saat Çalıştım ?"));
   }
 }

@@ -17,6 +17,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Material App', home: IkinciEkran(),debugShowCheckedModeBanner: false,);
+    return MaterialApp(title: 'MGS Saat Gösterici', home: IkinciEkran(),debugShowCheckedModeBanner: false,);
   }
 }
